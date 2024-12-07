@@ -1,0 +1,68 @@
+
+  /* Contenedor principal */
+  .container {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* 
+    width: 100%;
+    max-width: 600px;
+    text-align: center; */
+  }
+
+  .container h3 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  label {
+    font-size: 1rem;
+    color: #666;
+    text-align: left;
+    width: 100%;
+  }
+
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    border-color: #555;
+  }
+
+  button {
+    background-color: #dcdcdc;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #b3b3b3;
+    transform: scale(1.05);
+  }
+
+  /* Responsividad */
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+  }

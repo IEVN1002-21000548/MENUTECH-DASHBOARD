@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="grid grid-cols-2 gap-2">
+    <h3>Editar Cliente {{datillos.nombre}}: </h3>
+  </div>
+    
+    
+    <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <label for="nombre-cliente">Nombre del Cliente:</label>
+      <input type="text" id="nombre-cliente" formControlName="nombre" placeholder="Ejemplo: Juanillo Hernandez" required>
+  
+      <label for="restaurante">Nombre del Restaurante:</label>
+      <textarea id="restaurante" formControlName="restaurante" rows="3" placeholder="Escriba el nombre de su restaurante" required></textarea>
+  
+      <label for="puesto">Puesto:</label>
+      <input type="text" id="puesto" formControlName="puesto" placeholder="Puesto que desempeña en el restaurate." required>
+  
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" formControlName="direccion" required>
+  
+      <!-- <button type="submit" [disabled]="clienteForm.invalid">Registrar Cliente</button> 
+      <button (click)="actualizarContrato()">
+        <h1
+        class="px-3 py-1 shadow-lg shadow-white-500/50 bg-green-500 text-white rounded-lg text-[15px] cursor-pointer active:scale-[.97]">
+        Activar contrato</h1>
+      </button> -->
+      
+
+      <div class="grid grid-cols-2 gap-2">
+        <label for="contrato">Contrato?:</label>
+        <input type="checkbox" id="contrato" formControlName="contrato" required> 
+        <button type="submit">
+          <h1
+          class="px-3 py-1 shadow-lg shadow-gray-500/50 bg-black text-white rounded-lg text-[15px] cursor-pointer active:scale-[.97]">
+          Guardar</h1>
+        </button>
+        <button (click)="eliminarcliente()">
+          <h1
+          class="px-3 py-1 shadow-lg shadow-red-500/50 bg-red-500 text-white rounded-lg text-[15px] cursor-pointer active:scale-[.97]">
+          Eliminar Cliente</h1>
+        </button>
+      </div>
+      
+    </form>
+  </div>
+  

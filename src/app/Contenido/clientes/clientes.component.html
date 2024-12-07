@@ -1,0 +1,380 @@
+<!-- component -->
+<div class="max-w-[1100px] mx-auto">
+
+   <div class="relative flex flex-col w-full h-full text-slate-700 bg-white shadow-md rounded-xl bg-clip-border">
+       <div class="relative mx-4 mt-4 overflow-hidden text-slate-700 bg-white rounded-none bg-clip-border">
+           <div class="flex items-center justify-between ">
+               <div>
+                   <h3 class="text-lg font-semibold text-slate-800">Lista de Clientes</h3>
+                   <p class="text-slate-500">Clientes registrados</p>
+               </div>
+           <div class="flex flex-col gap-2 shrink-0 sm:flex-row">
+               <button routerLink="/agregarcliente"
+               class="flex select-none items-center gap-2 rounded bg-slate-800 py-2.5 px-4 text-xs font-semibold text-white shadow-md shadow-slate-900/10 transition-all hover:shadow-lg hover:shadow-slate-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+               type="button">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                   stroke-width="2" class="w-4 h-4">
+                   <path
+                   d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z">
+                   </path>
+               </svg>
+               Añadir +
+               </button>
+           </div>
+           </div>
+       
+       </div>
+       <div class="p-0 overflow-scroll" >
+           <table class="w-full mt-4 text-left table-auto min-w-max">
+           <thead>
+               <tr>
+               <th
+                   class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100">
+                   <p
+                   class="flex items-center justify-between gap-2 font-sans text-sm font-normal leading-none text-slate-500">
+                   Cliente
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                       stroke="currentColor" aria-hidden="true" class="w-4 h-4">
+                       <path stroke-linecap="round" stroke-linejoin="round"
+                       d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+                   </svg>
+                   </p>
+               </th>
+               <th
+                   class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100">
+                   <p
+                   class="flex items-center justify-between gap-2 font-sans text-sm font-normal leading-none text-slate-500">
+                   Restaurante
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                       stroke="currentColor" aria-hidden="true" class="w-4 h-4">
+                       <path stroke-linecap="round" stroke-linejoin="round"
+                       d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+                   </svg>
+                   </p>
+               </th>
+               <th
+                   class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100">
+                   <p
+                   class="flex items-center justify-between gap-2 font-sans text-sm font-normal leading-none text-slate-500">
+                   Puesto
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                       stroke="currentColor" aria-hidden="true" class="w-4 h-4">
+                       <path stroke-linecap="round" stroke-linejoin="round"
+                       d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+                   </svg>
+                   </p>
+               </th>
+               <th
+                   class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100">
+                   <p
+                   class="flex items-center justify-between gap-2 font-sans text-sm  font-normal leading-none text-slate-500">
+                   Contrato
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                       stroke="currentColor" aria-hidden="true" class="w-4 h-4">
+                       <path stroke-linecap="round" stroke-linejoin="round"
+                       d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+                   </svg>
+                   </p>
+               </th>
+               <th
+                   class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100">
+                   <p
+                   class="flex items-center justify-between gap-2 font-sans text-sm  font-normal leading-none text-slate-500">
+                   Fecha de registro
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                       stroke="currentColor" aria-hidden="true" class="w-4 h-4">
+                       <path stroke-linecap="round" stroke-linejoin="round"
+                       d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+                   </svg>
+                   </p>
+               </th>
+               <th
+                   class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100">
+                   <p
+                   class="flex items-center justify-between gap-2 font-sans text-sm  font-normal leading-none text-slate-500">
+                   Editar
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                       stroke="currentColor" aria-hidden="true" class="w-4 h-4">
+                       <path stroke-linecap="round" stroke-linejoin="round"
+                       d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+                   </svg>
+                   </p>
+               </th>
+               <th
+                   class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100">
+                   <p
+                   class="flex items-center justify-between gap-2 font-sans text-sm  font-normal leading-none text-slate-500">
+                   </p>
+               </th>
+               </tr>
+           </thead>
+           <tbody *ngFor="let cliente of clientes" >
+               <tr>
+               <td class="p-4 border-b border-slate-200">
+                   <div class="flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                        <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z" />
+                      </svg>
+                      
+                   <div class="flex flex-col">
+                       <p class="text-sm font-semibold text-slate-700">
+                       {{cliente.nombre}}
+                       </p>
+                   </div>
+                   </div>
+               </td>
+               <td class="p-4 border-b border-slate-200">
+                   <div class="flex flex-col">
+                   <p class="text-sm font-semibold text-slate-700">
+                       {{cliente.restaurante}}
+                   </p>
+                   <p
+                       class="text-sm text-slate-500">
+                       {{cliente.direccion}}
+                   </p>
+                   </div>
+               </td>
+               <td class="p-4 border-b border-slate-200">
+                   <div class="flex flex-col">
+                   <p class="text-sm font-semibold text-slate-700">
+                       {{cliente.puesto}}
+                   </p>
+                   <p
+                       class="text-sm text-slate-500">
+                       Organizacion
+                   </p>
+                   </div>
+               </td>
+               <td class="p-4 border-b border-slate-200">
+                   <div class="w-max">
+                   <div *ngIf="cliente.contrato"
+                       class="relative grid items-center px-2 py-1 font-sans text-xs font-bold text-green-900 uppercase rounded-md select-none whitespace-nowrap bg-green-500/20">
+                       <span class="">Activo</span>
+                   </div>
+                   <div *ngIf="!cliente.contrato"
+                       class="relative grid items-center px-2 py-1 font-sans text-xs font-bold uppercase rounded-md select-none whitespace-nowrap bg-slate-100 text-slate-500">
+                       <span class="">Pendiente</span>
+                   </div>
+                   </div>
+               </td>
+               <td class="p-4 border-b border-slate-200">
+                   <p class="text-sm text-slate-500">
+                   {{cliente.fecha}}
+                   </p>
+               </td>
+               <td class="p-4 border-b border-slate-200">
+                <button 
+                  class="relative h-10 max-h-[40px] w-10 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-slate-900 transition-all hover:bg-slate-900/10 active:bg-slate-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  (click)="enviar(cliente.id)">
+                  <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                    class="w-4 h-4">
+                    <path
+                      d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z">
+                    </path>
+                    </svg>
+                  </span>
+                </button>
+              </td>
+              
+               </tr>
+
+           </tbody>
+           </table>
+       </div>
+       <div class="flex items-center justify-between p-3">
+           <p class="block text-sm text-slate-500">
+           Page 1 of 10
+           </p>
+           <div class="flex gap-1">
+           <button 
+               class="rounded border border-slate-300 py-2.5 px-3 text-center text-xs font-semibold text-slate-600 transition-all hover:opacity-75 focus:ring focus:ring-slate-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+               type="button">
+               Previous
+           </button>
+           <button
+               class="rounded border border-slate-300 py-2.5 px-3 text-center text-xs font-semibold text-slate-600 transition-all hover:opacity-75 focus:ring focus:ring-slate-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+               type="button">
+               Next
+           </button>
+           </div>
+       </div>
+       </div>
+</div>
+
+<div class="px-6 pt-6 2xl:container">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="md:col-span-2 lg:col-span-1" >
+            <div class="h-full py-8 px-6 space-y-6 rounded-xl border border-gray-200 bg-white">
+                <svg class="w-40 m-auto opacity-75" viewBox="0 0 146 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M73.1866 5.7129C81.999 5.7129 90.725 7.44863 98.8666 10.821C107.008 14.1933 114.406 19.1363 120.637 25.3675C126.868 31.5988 131.811 38.9964 135.184 47.138C138.556 55.2796 140.292 64.0057 140.292 72.818C140.292 81.6304 138.556 90.3565 135.184 98.4981C131.811 106.64 126.868 114.037 120.637 120.269C114.406 126.5 107.008 131.443 98.8666 134.815C90.725 138.187 81.999 139.923 73.1866 139.923C64.3742 139.923 55.6481 138.187 47.5066 134.815C39.365 131.443 31.9674 126.5 25.7361 120.269C19.5048 114.037 14.5619 106.64 11.1895 98.4981C7.81717 90.3565 6.08144 81.6304 6.08144 72.818C6.08144 64.0057 7.81717 55.2796 11.1895 47.138C14.5619 38.9964 19.5048 31.5988 25.7361 25.3675C31.9674 19.1363 39.365 14.1933 47.5066 10.821C55.6481 7.44863 64.3742 5.7129 73.1866 5.7129L73.1866 5.7129Z" stroke="#e4e4f2" stroke-width="4.89873"/>
+                    <path d="M73.5 23.4494C79.9414 23.4494 86.3198 24.7181 92.2709 27.1831C98.222 29.6482 103.629 33.2612 108.184 37.816C112.739 42.3707 116.352 47.778 118.817 53.7291C121.282 59.6802 122.551 66.0586 122.551 72.5C122.551 78.9414 121.282 85.3198 118.817 91.2709C116.352 97.222 112.739 102.629 108.184 107.184C103.629 111.739 98.222 115.352 92.2709 117.817C86.3198 120.282 79.9414 121.551 73.5 121.551C67.0586 121.551 60.6802 120.282 54.7291 117.817C48.778 115.352 43.3707 111.739 38.816 107.184C34.2612 102.629 30.6481 97.222 28.1831 91.2709C25.7181 85.3198 24.4494 78.9414 24.4494 72.5C24.4494 66.0586 25.7181 59.6802 28.1831 53.7291C30.6481 47.778 34.2612 42.3707 38.816 37.816C43.3707 33.2612 48.778 29.6481 54.7291 27.1831C60.6802 24.7181 67.0586 23.4494 73.5 23.4494L73.5 23.4494Z" stroke="#e4e4f2" stroke-width="4.89873"/>
+                    <path d="M73 24C84.3364 24 95.3221 27.9307 104.085 35.1225C112.848 42.3142 118.847 52.322 121.058 63.4406C123.27 74.5592 121.558 86.1006 116.214 96.0984C110.87 106.096 102.225 113.932 91.7515 118.27C81.278 122.608 69.6243 123.181 58.7761 119.89C47.9278 116.599 38.5562 109.649 32.258 100.223C25.9598 90.7971 23.1248 79.479 24.2359 68.1972C25.3471 56.9153 30.3357 46.3678 38.3518 38.3518" stroke="url(#paint0_linear_622:13617)" stroke-width="10" stroke-linecap="round"/>
+                    <path d="M73 5.00001C84.365 5.00001 95.5488 7.84852 105.529 13.2852C115.509 18.7218 123.968 26.5732 130.131 36.1217C136.295 45.6702 139.967 56.6112 140.812 67.9448C141.657 79.2783 139.648 90.6429 134.968 101C130.288 111.357 123.087 120.375 114.023 127.232C104.96 134.088 94.3218 138.563 83.0824 140.248C71.8431 141.933 60.3606 140.775 49.6845 136.878C39.0085 132.981 29.4793 126.471 21.9681 117.942" stroke="url(#paint1_linear_622:13617)" stroke-width="10" stroke-linecap="round"/>
+                    <path d="M9.60279 97.5926C6.37325 89.2671 4.81515 80.3871 5.01745 71.4595C5.21975 62.5319 7.1785 53.7316 10.7818 45.561C14.3852 37.3904 19.5626 30.0095 26.0184 23.8398C32.4742 17.6701 40.082 12.8323 48.4075 9.6028" stroke="url(#paint2_linear_622:13617)" stroke-width="10" stroke-linecap="round"/>
+                    <path d="M73 5.00001C86.6504 5.00001 99.9849 9.10831 111.269 16.7904" stroke="url(#paint3_linear_622:13617)" stroke-width="10" stroke-linecap="round"/>
+                    <circle cx="73.5" cy="72.5" r="29" fill="#e4e4f2" stroke="#e4e4f2"/>
+                    <path d="M74 82.8332C68.0167 82.8332 63.1666 77.9831 63.1666 71.9998C63.1666 66.0166 68.0167 61.1665 74 61.1665C79.9832 61.1665 84.8333 66.0166 84.8333 71.9998C84.8333 77.9831 79.9832 82.8332 74 82.8332ZM74 80.6665C76.2985 80.6665 78.5029 79.7534 80.1282 78.1281C81.7535 76.5028 82.6666 74.2984 82.6666 71.9998C82.6666 69.7013 81.7535 67.4969 80.1282 65.8716C78.5029 64.2463 76.2985 63.3332 74 63.3332C71.7014 63.3332 69.497 64.2463 67.8717 65.8716C66.2464 67.4969 65.3333 69.7013 65.3333 71.9998C65.3333 74.2984 66.2464 76.5028 67.8717 78.1281C69.497 79.7534 71.7014 80.6665 74 80.6665ZM70.75 67.6665H77.25L79.9583 71.4582L74 77.4165L68.0416 71.4582L70.75 67.6665ZM71.8658 69.8332L70.8691 71.2307L74 74.3615L77.1308 71.2307L76.1341 69.8332H71.8658Z" fill="#6A6A9F"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_622:13617" x1="45.9997" y1="19" x2="46.0897" y2="124.308" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E323FF"/>
+                    <stop offset="1" stop-color="#7517F8"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_622:13617" x1="1.74103e-06" y1="8.70228e-06" x2="6.34739e-08" y2="140.677" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#4DFFDF"/>
+                    <stop offset="1" stop-color="#4DA1FF"/>
+                    </linearGradient>
+                    <linearGradient id="paint2_linear_622:13617" x1="36.4997" y1="5.07257e-06" x2="36.6213" y2="142.36" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFD422"/>
+                    <stop offset="1" stop-color="#FF7D05"/>
+                    </linearGradient>
+                    <linearGradient id="paint3_linear_622:13617" x1="1.74103e-06" y1="8.70228e-06" x2="6.34739e-08" y2="140.677" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#4DFFDF"/>
+                    <stop offset="1" stop-color="#4DA1FF"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                <div>
+                    <h5 class="text-xl text-gray-600 text-center">VENTAS TOTALES</h5>
+                    <div class="mt-2 flex justify-center gap-4">
+                        <h3 class="text-3xl font-bold text-gray-700">$100</h3>
+                        <div class="flex items-end gap-1 text-green-500">
+                            <svg class="w-3" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.00001 0L12 8H-3.05176e-05L6.00001 0Z" fill="currentColor"/>
+                            </svg>
+                            <span>28,500</span>
+                        </div>
+                    </div>
+                    <span class="block text-center text-gray-500">Ventas Modelos</span>
+                </div>
+                <table class="w-full text-gray-600">
+                    <tbody>
+                        <tr>
+                            <td class="py-2">Pizza $3,000</td>
+                            <td class="text-gray-500">1</td>
+                            <td>
+                                <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="19" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="35" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="51" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <path d="M0 7C8.62687 7 7.61194 16 17.7612 16C27.9104 16 25.3731 9 34 9C42.6269 9 44.5157 5 51.2537 5C57.7936 5 59.3731 14.5 68 14.5" stroke="url(#paint0_linear_622:13631)" stroke-width="2" stroke-linejoin="round"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_622:13631" x1="68" y1="7.74997" x2="1.69701" y2="8.10029" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E323FF"/>
+                                    <stop offset="1" stop-color="#7517F8"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            </td>   
+                        </tr>
+                        <tr>
+                            <td class="py-2">Pastel $1000</td>
+                            <td class="text-gray-500">3</td>
+                            <td>
+                                <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="19" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="35" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="51" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <path d="M0 12.929C8.69077 12.929 7.66833 9.47584 17.8928 9.47584C28.1172 9.47584 25.5611 15.9524 34.2519 15.9524C42.9426 15.9524 44.8455 10.929 51.6334 10.929C58.2217 10.929 59.3092 5 68 5" stroke="url(#paint0_linear_622:13640)" stroke-width="2" stroke-linejoin="round"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_622:13640" x1="34" y1="5" x2="34" y2="15.9524" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#8AFF6C"/>
+                                    <stop offset="1" stop-color="#02C751"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            </td>   
+                        </tr>
+                        <tr>
+                            <td class="py-2">Hamburguesa $4,500</td>
+                            <td class="text-gray-500">5</td>
+                            <td>
+                                <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="19" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="35" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="51" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <path d="M0 6C8.62687 6 6.85075 12.75 17 12.75C27.1493 12.75 25.3731 9 34 9C42.6269 9 42.262 13.875 49 13.875C55.5398 13.875 58.3731 6 67 6" stroke="url(#paint0_linear_622:13649)" stroke-width="2" stroke-linejoin="round"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_622:13649" x1="67" y1="7.96873" x2="1.67368" y2="8.44377" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFD422"/>
+                                    <stop offset="1" stop-color="#FF7D05"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            </td>   
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+        </div>
+        <div>
+            <div class="h-full py-6 px-6 rounded-xl border border-gray-200 bg-white">
+                <h5 class="text-xl text-gray-700">VENTAS GENERALES</h5>
+                <div class="my-8">
+                    <h1 class="text-5xl font-bold text-gray-800">54,5%</h1>
+                    <span class="text-gray-500">Ùltima semana</span>
+                </div>
+                <svg class="w-full" viewBox="0 0 218 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 67.5C27.8998 67.5 24.6002 15 52.5 15C80.3998 15 77.1002 29 105 29C132.9 29 128.6 52 156.5 52C184.4 52 189.127 63.8158 217.027 63.8158" stroke="url(#paint0_linear_622:13664)" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M0 67.5C27.2601 67.5 30.7399 31 58 31C85.2601 31 80.7399 2 108 2C135.26 2 134.74 43 162 43C189.26 43 190.74 63.665 218 63.665" stroke="url(#paint1_linear_622:13664)" stroke-width="3" stroke-linecap="round"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_622:13664" x1="217.027" y1="15" x2="7.91244" y2="15" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#4DFFDF"/>
+                    <stop offset="1" stop-color="#4DA1FF"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_622:13664" x1="218" y1="18.3748" x2="5.4362" y2="18.9795" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E323FF"/>
+                    <stop offset="1" stop-color="#7517F8"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                <table class="mt-6 -mb-2 w-full text-gray-600">
+                    <tbody>
+                        <tr>
+                            <td class="py-2">Restaurante</td>
+                            <td class="text-gray-500">$800</td>
+                            <td>
+                                <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="19" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="35" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="51" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <path d="M0 7C8.62687 7 7.61194 16 17.7612 16C27.9104 16 25.3731 9 34 9C42.6269 9 44.5157 5 51.2537 5C57.7936 5 59.3731 14.5 68 14.5" stroke="url(#paint0_linear_622:13631)" stroke-width="2" stroke-linejoin="round"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_622:13631" x1="68" y1="7.74997" x2="1.69701" y2="8.10029" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E323FF"/>
+                                    <stop offset="1" stop-color="#7517F8"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            </td>   
+                        </tr>
+                        <tr>
+                            <td class="py-2">Platillo</td>
+                            <td class="text-gray-500">100 ' 2000</td>
+                            <td>
+                                <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="19" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="35" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                    <rect opacity="0.4" x="51" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                    <path d="M0 12.929C8.69077 12.929 7.66833 9.47584 17.8928 9.47584C28.1172 9.47584 25.5611 15.9524 34.2519 15.9524C42.9426 15.9524 44.8455 10.929 51.6334 10.929C58.2217 10.929 59.3092 5 68 5" stroke="url(#paint0_linear_622:13640)" stroke-width="2" stroke-linejoin="round"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_622:13640" x1="34" y1="5" x2="34" y2="15.9524" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#8AFF6C"/>
+                                    <stop offset="1" stop-color="#02C751"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            </td>   
+                        </tr>
+                    </tbody>
+                </table>   
+            </div>
+        </div>
+        <div>
+           
+                

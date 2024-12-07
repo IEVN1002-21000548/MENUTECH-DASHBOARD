@@ -1,0 +1,43 @@
+<div class="container">
+    <h3>Editar platillo</h3>
+    <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+      <label for="nombre">Nombre del Platillo:</label>
+      <input type="text" id="nombre" formControlName="nombre" placeholder="Ejemplo: Enchiladas" required>
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" rows="3" formControlName="descripcion" placeholder="Ejemplo: Tortillas rellenas con pollo y bañadas en salsa verde" required></textarea>
+      
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" rows="3" formControlName="precio" required>
+      
+      <label for="ingredientes">Ingredientes:</label>
+      <textarea id="ingredientes" rows="3" formControlName="ingredientes" placeholder="Tortillas, pollo, salsa verde, jitomates" required></textarea>
+      
+      <label for="inf_nutricional">Informacion  Nutricional:</label>
+      <textarea id="inf_nutricional" rows="3" formControlName="inf_nutricional" placeholder="1100 calorias, 500 hidrocarbonatos" required></textarea>
+
+      
+      <label for="categoria">Restaurante:</label>
+      <select id="categoria" formControlName="restaurante" placeholder="Selecciona el restaurante" required>
+        <div *ngFor="let restaurante of restaurantes" >
+          <option value="{{restaurante.restaurante}}">{{restaurante.restaurante}}</option>
+        </div>
+      </select>
+      <!-- <label for="imagen" formControlName="imagen"> Imagen del Platillo:</label>
+      <input type="file" id="imagen" accept="image/*"> -->
+
+      <div class="grid grid-cols-2 gap-2">
+        <button type="submit">
+            <h1
+            class="px-3 py-1 shadow-lg shadow-gray-500/50 bg-black text-white rounded-lg text-[15px] cursor-pointer active:scale-[.97]">
+            Guardar</h1>
+          </button>
+          <button (click)="eliminarplatillo()">
+            <h1
+            class="px-3 py-1 shadow-lg shadow-red-500/50 bg-red-500 text-white rounded-lg text-[15px] cursor-pointer active:scale-[.97]">
+            Eliminar Platillo</h1>
+          </button>
+      </div>
+      
+    </form>
+  </div>

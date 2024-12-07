@@ -1,0 +1,26 @@
+<div class="container">
+    <h3>Agregar Nuevo Cliente</h3>
+    
+    <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <label for="nombre-cliente">Nombre del Cliente:</label>
+      <input type="text" id="nombre-cliente" formControlName="nombre" placeholder="Ejemplo: Juanillo Hernandez" required>
+  
+      <label for="restaurante">Nombre del Restaurante:</label>
+      <textarea id="restaurante" formControlName="restaurante" rows="3" placeholder="Escriba el nombre de su restaurante" required></textarea>
+  
+      <label for="puesto">Puesto:</label>
+      <input type="text" id="puesto" formControlName="puesto" placeholder="Puesto que desempeña en el restaurate." required>
+  
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" formControlName="direccion" placeholder="Col. Ejemplo #123" required>
+
+    <!-- <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar">Sube una foto</label>
+    <input id="imagen" formControlName="imagen" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+   -->
+
+      
+  
+      <button type="submit" [disabled]="clienteForm.invalid">Registrar Cliente</button>
+    </form>
+  </div>
+  

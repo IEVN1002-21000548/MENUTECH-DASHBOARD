@@ -1,0 +1,104 @@
+<section class="grid grid-cols-3 bg-white divide-x w-full rounded-lg">
+		<div class="flex px-8 py-5 cursor-pointer text-gray-900 items-center hover:bg-gray-100 ">
+			<svg class="text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48px"
+				fill="#5f6368">
+				<path
+					d="M212-241v-339h60v339h-60Zm242 0v-339h60v339h-60ZM80-121v-60h800v60H80Zm608-120v-339h60v339h-60ZM80-640v-53l400-228 400 228v53H80Zm134-60h532-532Zm0 0h532L480-852 214-700Z" />
+			</svg>
+			<div class="ml-3">
+				<div class="font-medium leading-6 text-gray-600">+1 Nuevo</div>
+				<div class="mt-0.5 text-sm text-gray-500">Restaurante</div>
+			</div>
+		</div>
+		<div class="flex px-8 py-5 cursor-pointer text-gray-900 items-center hover:bg-gray-100">
+			<svg class="text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48px"
+				fill="#5f6368">
+				<path
+					d="M480.09-490q28.91 0 49.41-20.59 20.5-20.59 20.5-49.5t-20.59-49.41q-20.59-20.5-49.5-20.5t-49.41 20.59q-20.5 20.59-20.5 49.5t20.59 49.41q20.59 20.5 49.5 20.5ZM480-159q133-121 196.5-219.5T740-552q0-117.79-75.29-192.9Q589.42-820 480-820t-184.71 75.1Q220-669.79 220-552q0 75 65 173.5T480-159Zm0 79Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+			</svg>
+			<div class="ml-3">
+				<div class="font-medium leading-6 text-gray-600">Direcciones:</div>
+				<div class="mt-0.5 text-sm text-gray-500">{{clientes.length}} en total</div>
+			</div>
+		</div>
+		<div class="flex px-8 py-5 cursor-pointer text-gray-900 items-center hover:bg-gray-100">
+			<svg class="text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48px"
+				fill="#5f6368">
+				<path
+					d="M562-524h268v-186H562v186Zm135-37-105-79v-40l104 79 104-79v40l-103 79ZM60-120q-24 0-42-18T0-180v-600q0-24 18-42t42-18h840q24 0 42 18t18 42v600q0 24-18 42t-42 18H60Zm531-60h309v-600H60v600h7q44-69 112.5-109T329-329q81 0 149.5 40T591-180ZM329-400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM143-180h372q-35.61-42.27-84.3-65.64Q382-269 329-269t-101.5 23.5Q179-222 143-180Zm186-280q-25.5 0-42.75-17.25T269-520q0-25.5 17.25-42.75T329-580q25.5 0 42.75 17.25T389-520q0 25.5-17.25 42.75T329-460Zm151-20Z" />
+			</svg>
+			<div class="ml-3">
+				<div class="font-medium leading-6 text-gray-600">{{clientes.length}} Restaurantes</div>
+			<div class="mt-0.5 text-sm text-gray-500">registrados</div>
+			</div>
+		</div>
+		 </section>
+
+		 <!-- component -->
+		 <input 
+		 class="w-full border-none bg-transparent px-4 py-1 text-gray-400 outline-none focus:outline-none" 
+		 type="search" 
+		 name="search" 
+		 placeholder="Search..." 
+		 [(ngModel)]="searchTerm" 
+	   />
+
+	   <td>Filttro {{searchTerm}}</td>
+
+	   <section class="text-gray-600 body-font">
+		<div class="flex flex-wrap w-full mb-4 p-4">
+		  <div class="w-full mb-6 lg:mb-0">
+			<h1 class="sm:text-4xl text-5xl font-medium font-bold title-font mb-2 text-gray-900">Restaurantes Registrados</h1>
+			<div class="h-1 w-20 bg-indigo-500 rounded"></div>
+		  </div>
+		</div >
+		<div class="flex flex-wrap -m-4"  >
+		  <div class="xl:w-1/3 md:w-1/2 p-4" *ngFor="let cliente of clientes" >
+			<div class="bg-white p-6 rounded-lg"  *ngIf="cliente.nombre == searchTerm">
+			  <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src="https://picsum.photos/id/163/400/400" alt="Image Size 720x400">
+			  <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">{{cliente.nombre}}</h3>
+			  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{cliente.restaurante}}</h2>
+			  <p class="leading-relaxed text-base">{{cliente.direccion}}</p>
+			  <p class="leading-relaxed text-base">Registrado en: {{cliente.fecha}}</p>
+			  <div class="flex flex-col gap-4 mb-6">
+				<button (click)="enviar(cliente.id)" class="mt-4 px-4 py-2 border border-gray-400 rounded-lg hover:bg-blue-500 hover:text-white transition duration-200 ease-in-out focus:outline-none">
+					Administrar
+				</button>
+				<button (click)="verPlatillos(cliente.restaurante)" class="mt-4 px-4 py-2 border border-gray-400 rounded-lg hover:bg-blue-500 hover:text-white transition duration-200 ease-in-out focus:outline-none">
+					Platillos
+				</button>
+			</div>
+			</div>
+		  </div>
+		</div>
+	</section>
+
+<!-- component 2 parte-->
+<!-- <section class="text-gray-600 body-font">
+      <div class="flex flex-wrap w-full mb-4 p-4">
+        <div class="w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-4xl text-5xl font-medium font-bold title-font mb-2 text-gray-900">Restaurantes Registrados</h1>
+          <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+        </div>
+      </div >
+      <div class="flex flex-wrap -m-4"  >
+        <div class="xl:w-1/3 md:w-1/2 p-4" *ngFor="let cliente of clientes">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src="https://picsum.photos/id/163/400/400" alt="Image Size 720x400">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">{{cliente.nombre}}</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{cliente.restaurante}}</h2>
+            <p class="leading-relaxed text-base">{{cliente.direccion}}</p>
+            <p class="leading-relaxed text-base">Registrado en: {{cliente.fecha}}</p>
+            <div class="flex flex-col gap-4 mb-6">
+              <button (click)="enviar(cliente.id)" class="mt-4 px-4 py-2 border border-gray-400 rounded-lg hover:bg-blue-500 hover:text-white transition duration-200 ease-in-out focus:outline-none">
+                  Administrar
+              </button>
+              <button (click)="verPlatillos(cliente.restaurante)" class="mt-4 px-4 py-2 border border-gray-400 rounded-lg hover:bg-blue-500 hover:text-white transition duration-200 ease-in-out focus:outline-none">
+                  Platillos
+              </button>
+          </div>
+          </div>
+        </div>
+      </div>
+  </section>
+ -->
